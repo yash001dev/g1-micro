@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery,npm/lodash,npm/g1"></script>
+
+</head>
+<body>
+    <ul>
+        <li><a class="urlfilter" href="?view=sales">Set ?view=sales,Keep the rest</a></li>
+        <li><a class="urlfilter"
+               href="?view=profit">Set ?view=profit, keep the rest</a></li>
+        <li><a class="urlfilter"
+               href="?year=2018">Set ?year=2018, keep the rest</a></li>
+    </ul>
+    <script>
+        $('body').urlfilter()         // activates URL filtering on the entire page
+    </script>
+</body>
+</html>

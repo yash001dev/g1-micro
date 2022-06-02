@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/combine/npm/jquery,npm/lodash,npm/g1"></script>
+
+</head>
+<body>
+    <template class="sales">Sales was <%- data  %> in <%- q.year
+        %>.</template>
+    <template class="profit">Profit was <%- data
+            %> in <%- q.year
+                %>.</template>
+    <script>
+        var data={
+            sales: { 2018: 250, 2019: 260 },
+            profit: { 2018: 50, 2019: 60 }
+        }    
+        var q=g1.url.parse(location.href).searchKey;
+        console.log(q);
+        $('template.'+q.view).template({data:data[q.view][q.year],q:q});
+    </script>
+</body>
+</html>
